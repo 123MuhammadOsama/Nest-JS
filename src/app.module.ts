@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -8,9 +9,10 @@ import { EmpoloyeeModule } from './empoloyee/empoloyee.module';
 import { EmployeeService } from './employee/employee.service';
 import { EmployeeController } from './employee/employee.controller';
 import { CategoryModule } from './category/category.module';
+import { StudentModule } from './student/student.module';
 
 @Module({
-  imports: [EmpoloyeeModule, CategoryModule],
+  imports: [EmpoloyeeModule, CategoryModule, StudentModule],
   controllers: [AppController, UserController, ProductController, EmployeeController],
   providers: [AppService, ProductService, EmployeeService],
 })
