@@ -11,15 +11,15 @@ export class CustomerService {
         return this.customers;
     }
 
-    addCustomer(CreateCustomerDto: CreateCustomerDto): Customer {
+    addCustomer(createCustomerDto: CreateCustomerDto): Customer {
         const newCustomer: Customer = {
-            id: String(Date.now()),
-            ...CreateCustomerDto,
+          id: String(Date.now()),
+          ...createCustomerDto,
         };
+        console.log('New customer:', newCustomer); // 👈 Add this
         this.customers.push(newCustomer);
         return newCustomer;
-    }
-
-    
+      }
+      
     
 }
